@@ -1,6 +1,6 @@
 {
     "dev": {
-        "app_function": "proyecto.app",
+        "app_function": "app.app",
         "aws_region": "us-east-1",
         "exclude": [
             "boto3",
@@ -10,8 +10,8 @@
             "concurrent"
         ],
         "profile_name": "default",
-        "project_name": "nube9",
-        "runtime": "python3.10",
+        "project_name": "environment",
+        "runtime": "python3.9",
         "s3_bucket": "zappa-u7pc64a1g",
         "keep_warm": false,
         "apigateway_enabled": false,
@@ -19,7 +19,7 @@
         "role_name": "LabRole",
         "events": [
             {
-                "function": "proyecto.app",
+                "function": "app.app",
                 "event_source": {
                     "arn": "arn:aws:s3:::zappa-u7pc64a1g",
                     "events": ["s3:ObjectCreated:*"]
